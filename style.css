@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Topbar removed — related rules deleted */
+
+.main {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.promo {
+    flex: 1 1 60%;
+}
+
+/* New hero / left promo */
+.hero {
+    /* Hero fills available space above footer; align content toward top */
+    background: radial-gradient(circle at 10% 20%, rgba(24,119,242,0.02), transparent 120px),
+                            radial-gradient(circle at 80% 80%, rgba(0,0,0,0.02), transparent 200px),
+                            #f0f2f5;
+    display: flex;
+    align-items: flex-start;
+    flex: 1 1 auto;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+    padding-top: 56px;
+    padding-bottom: 12px;
+}
+
+.hero-inner {
+    margin-bottom: 0;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.left {
+    flex: 1 1 60%;
+    text-align: left;
+}
+
+.fb-logo {
+    font-size: 64px;
+    color: #1877f2;
+    font-weight: 700;
+    margin-bottom: 18px;
+    font-family: 'Helvetica Neue', Helvetica, Arial;
+}
+
+.promo-text {
+    font-size: 20px;
+    color: #1c1e21;
+    max-width: 480px;
+    line-height: 1.3;
+}
+
+.card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(17,17,17,0.08);
+}
+
+.signup-card {
+    width: 360px;
+    padding: 20px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: 1px solid #e4e6eb;
+    font-size: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn.primary {
+    background: #1877f2;
+    color: #fff;
+    width: 100%;
+}
+
+.btn.create {
+    background: #42b72a;
+    color: #fff;
+    width: 100%;
+    margin-top: 6px;
+}
+
+.forgot {
+    display: block;
+    text-align: center;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.footer {
+    background: #fff;
+    /* fixed footer so page never scrolls */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 120px;
+    text-align: center;
+    color: #606770;
+    font-size: 13px;
+    padding: 18px 18px 12px;
+    border-top: 1px solid #e9e9ea;
+    box-shadow: 0 -6px 18px rgba(17,17,17,0.03);
+    z-index: 30;
+}
+
+/* Footer layout */
+.footer-langs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px 18px;
+    justify-content: center;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.footer-langs a {
+    color: #365899;
+    text-decoration: none;
+    font-size: 13px;
+}
+.footer-langs .more {
+    color: #365899;
+    font-weight: 700;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px 18px;
+    justify-content: center;
+    margin-bottom: 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.footer-links a {
+    color: #606770;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-copy {
+    color: #90949c;
+    font-size: 12px;
+    margin-top: 6px;
+}
+/* Footer links mimic compact layout */
+.footer p { margin: 0; }
+
+@media (max-width: 880px) {
+        .hero-inner { flex-direction: column; gap: 18px; }
+        .fb-logo { font-size: 40px; }
+        .promo-text { font-size: 16px; }
+        .signup-card { width: 100%; }
+        .left { text-align: center; }
+    .footer-langs, .footer-links { gap: 8px 10px; }
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e9e9ea;
+    margin: 14px 0;
+}
+
+@media (max-width: 880px) {
+    .main { flex-direction: column; gap: 20px; text-align: center; }
+    .promo h2 { font-size: 22px; }
+    .container { padding: 12px; }
+    .signup-card { width: 100%; }
+}

